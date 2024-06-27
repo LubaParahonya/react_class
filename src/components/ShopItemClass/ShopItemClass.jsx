@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
-import styles from './shopItemClass.module.css'
+import './shopItemClass.css'
 
 class ShopItemClass extends Component {
       render(){
         const {brand, title, description, descriptionFull, price, currency} = this.props.info
         return (
-            <div className ={styles["main-content"]}>
+            <div className ="main-content">
                <h2>{brand}</h2>
                 <h1>{title}</h1>
                 <h3>{description}</h3>
-            <div className ={styles["description"]}>
+            <div className ="description">
                 {descriptionFull}
             </div>
-  <div className ={styles["highlight-window mobile"]}><div className ={styles["highlight-overlay"]}></div></div>
-  <div className ={styles["divider"]}></div>
-  <div className ={styles["purchase-info"]}>
-    <div className ={styles["price"]}>{currency}{price}</div>
+  <div className ="highlight-window mobile"><div className ="highlight-overlay"></div></div>
+  <div className ="divider"></div>
+  <div className ="purchase-info">
+    <div className ="price">{currency}{price}</div>
     <button>Добавить в корзину</button>
   </div>
 </div>
